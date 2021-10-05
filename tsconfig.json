@@ -15,6 +15,24 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2017",
+    "paths": {
+      "square-basic": [
+        "dist/square-basic/square-basic",
+        "dist/square-basic"
+      ],
+      "square-database": [
+        "dist/square-database/square-database",
+        "dist/square-database"
+      ],
+      "square-firebase": [
+        "dist/square-firebase/square-firebase",
+        "dist/square-firebase"
+      ],
+      "square-rest": [
+        "dist/square-rest/square-rest",
+        "dist/square-rest"
+      ]
+    },
     "module": "es2020",
     "lib": [
       "es2018",

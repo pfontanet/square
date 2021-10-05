@@ -1,7 +1,135 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "ab8e84a6-1e5c-4368-ba97-178da598d3af"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "square-basic": {
+      "projectType": "library",
+      "root": "projects/square-basic",
+      "sourceRoot": "projects/square-basic/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/square-basic/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/square-basic/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/square-basic/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/square-basic/src/test.ts",
+            "tsConfig": "projects/square-basic/tsconfig.spec.json",
+            "karmaConfig": "projects/square-basic/karma.conf.js"
+          }
+        }
+      }
+    },
+    "square-database": {
+      "projectType": "library",
+      "root": "projects/square-database",
+      "sourceRoot": "projects/square-database/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/square-database/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/square-database/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/square-database/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/square-database/src/test.ts",
+            "tsConfig": "projects/square-database/tsconfig.spec.json",
+            "karmaConfig": "projects/square-database/karma.conf.js"
+          }
+        }
+      }
+    },
+    "square-firebase": {
+      "projectType": "library",
+      "root": "projects/square-firebase",
+      "sourceRoot": "projects/square-firebase/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/square-firebase/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/square-firebase/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/square-firebase/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/square-firebase/src/test.ts",
+            "tsConfig": "projects/square-firebase/tsconfig.spec.json",
+            "karmaConfig": "projects/square-firebase/karma.conf.js"
+          }
+        }
+      }
+    },
+    "square-rest": {
+      "projectType": "library",
+      "root": "projects/square-rest",
+      "sourceRoot": "projects/square-rest/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/square-rest/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/square-rest/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/square-rest/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/square-rest/src/test.ts",
+            "tsConfig": "projects/square-rest/tsconfig.spec.json",
+            "karmaConfig": "projects/square-rest/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "square-basic"
 }
