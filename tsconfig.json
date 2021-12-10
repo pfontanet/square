@@ -27,10 +27,6 @@
       "square-firebase": [
         "dist/square-firebase/square-firebase",
         "dist/square-firebase"
-      ],
-      "square-rest": [
-        "dist/square-rest/square-rest",
-        "dist/square-rest"
       ]
     },
     "module": "es2020",
